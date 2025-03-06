@@ -1,0 +1,16 @@
+---
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/astro/components";
+import "../styles/global.css";
+---
+
+<nav class="flex items-center justify-between p-4 bg-gray-900 text-white">
+  <div class="text-xl font-geist font-bold">Player Dashboard</div>
+  <div>
+    <SignedOut>
+      <SignInButton mode="modal" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600" />
+    </SignedOut>
+    <SignedIn>
+      <UserButton afterSignOutUrl="/" />
+    </SignedIn>
+  </div>
+</nav>
